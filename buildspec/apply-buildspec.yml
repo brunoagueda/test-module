@@ -16,4 +16,4 @@ phases:
     commands:
       - terraform apply -var-file="dev-app.tfvars" --auto-approve
   
-  post_build:
+
