@@ -12,6 +12,6 @@ phases:
   post_build:
     env:
       variables:
-        - build_message: var.message
+        - build_message: "mais um teste"
       exported-variables:
         - build_message
