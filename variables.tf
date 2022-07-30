@@ -18,5 +18,5 @@ variable "aws_region" {
 variable "message" {
   description = "decision to create IGW"
   type        = string
-  default     = "Test message var"
+  default     = "Test message codebuild to lambda"
 }
