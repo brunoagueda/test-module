@@ -2,7 +2,7 @@ version: 0.2
 
 env:
     variables:
-      - build_message: "mais um teste"
+      build_message: "mais um teste"
     exported-variables:
       - build_message
 
