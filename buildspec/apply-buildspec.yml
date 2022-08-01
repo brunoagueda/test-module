@@ -2,9 +2,9 @@ version: 0.2
 
 env:
     variables:
-      build_message: "mais um teste"
-    exported-variables:
-      - build_message
+      RUNNERUSER: var.runnerUser
+      RUNNERDEVICE: var.runnerDevice
+    
 
 phases:
   pre_build:
@@ -23,5 +23,5 @@ phases:
   
   post_build:
     commands:
-     - aws lambda update-function-configuration --function-name PSTest --environment "Variables={runnerUser=var.runnerUser,runnerDevice=var.runnerDevice}"
+     - aws lambda update-function-configuration --function-name PSTest --environment "Variables={runnerUser=$RUNNERUSER,runnerDevice=RUNNERDEVICE}"
      
