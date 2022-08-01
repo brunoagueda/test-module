@@ -9,6 +9,8 @@ env:
 phases:
   pre_build:
     commands:
+      - sudo apt update
+      - sudo apt install awscli
       - terraform init
       - terraform validate
   
@@ -18,5 +20,5 @@ phases:
   
   post_build:
     commands:
- #   - aws lambda update-function-configuration --function-name PSTest --environment "Variables={mensagem=teste 1234}"
+     - aws lambda update-function-configuration --function-name PSTest --environment "Variables={mensagem=teste 1234}"
      - aws --version
