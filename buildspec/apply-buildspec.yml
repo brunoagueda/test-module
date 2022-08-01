@@ -1,9 +1,9 @@
 version: 0.2
 
-env:
-    variables:
-      RUNNERUSER: var.runnerUser
-      RUNNERDEVICE: var.runnerDevice
+#env:
+#    variables:
+#      RUNNERUSER: var.runnerUser
+#      RUNNERDEVICE: var.runnerDevice
     
 
 phases:
@@ -23,5 +23,5 @@ phases:
   
   post_build:
     commands:
-     - aws lambda update-function-configuration --function-name PSTest --environment "Variables={runnerUser=$RUNNERUSER,runnerDevice=RUNNERDEVICE}"
+     - aws lambda update-function-configuration --function-name PSTest --environment "Variables={runnerUser=$runnerUser,runnerDevice=$runnerDevice}"
      
