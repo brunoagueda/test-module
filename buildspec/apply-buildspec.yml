@@ -16,7 +16,7 @@ phases:
     commands:
       - terraform apply -var-file="dev-app.tfvars" --auto-approve
   
-  post-build:
+  post_build:
     commands:
     - aws lambda update-function-configuration --function-name PSTest --environment "Variables={mensagem=teste 1234}"
 
