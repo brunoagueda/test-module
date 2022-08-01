@@ -10,13 +10,17 @@ variable "aws_region" {
 
 
 
-
 # -------------------------------------------
-# Test Variables
+# A360
 # -------------------------------------------
-
-variable "message" {
-  description = "decision to create IGW"
+variable "runnerUser" {
+  description = "Runner user"
   type        = string
-  default     = "Test message codebuild to lambda"
+  default     = null
+}
+
+variable "runnerDevice" {
+  description = "Runner device"
+  type        = string
+  default     = null
 }
