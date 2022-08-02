@@ -1,4 +1,4 @@
 output "runnerUser" {
-  value       = var.runnerUser
+  value       = var.runner_User
   description = "Runner User"
 }

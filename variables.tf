@@ -13,13 +13,13 @@ variable "aws_region" {
 # -------------------------------------------
 # A360
 # -------------------------------------------
-variable "runnerUser" {
+variable "runner_User" {
   description = "Runner user"
   type        = string
   default     = null
 }
 
-variable "runnerDevice" {
+variable "runner_Device" {
   description = "Runner device"
   type        = string
   default     = null

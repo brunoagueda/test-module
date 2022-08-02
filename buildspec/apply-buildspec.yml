@@ -1,9 +1,9 @@
 version: 0.2
 
-env:
-    variables:
-      RUNNERUSER: $runnerUser
-      RUNNERDEVICE: $runnerDevice
+#env:
+#    variables:
+#      RUNNERUSER: $runnerUser
+#      RUNNERDEVICE: $runnerDevice
     
 
 phases:
@@ -23,7 +23,8 @@ phases:
   
   post_build:
     commands:
-     - echo $RUNNERUSER
-     - echo $RUNNERDEVICE
-     - aws lambda update-function-configuration --function-name PSTest --environment "Variables={runnerUser=$RUNNERUSER,runnerDevice=$RUNNERDEVICE}"
+     - echo $RUNNER_USER
+     - echo $runner_User
+     - echo $RUNNER_DEVICE
+     - aws lambda update-function-configuration --function-name PSTest --environment "Variables={runnerUser=$runner_User,runnerDevice=$runner_Device}"
      
