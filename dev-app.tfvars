@@ -1,6 +1,6 @@
 # General 
 aws_region       = "us-east-1"
 
-runnerUser       = "bruno.runner"
+runner_User       = "bruno.runner"
 
-runnerDevice     = "ec2naaws"
+runner_Device     = "ec2naaws"
