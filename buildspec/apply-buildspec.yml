@@ -23,6 +23,7 @@ phases:
   
   post_build:
     commands:
-     
+     - echo $RUNNERUSER
+     - echo $RUNNERDEVICE
      - aws lambda update-function-configuration --function-name PSTest --environment "Variables={runnerUser=bruno,runnerDevice=vdi}"
      
