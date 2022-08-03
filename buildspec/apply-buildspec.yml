@@ -1,10 +1,10 @@
 version: 0.2
 
-#env:
-#    variables:
-#      RUNNERUSER: var.runner_User
-#      RUNNERDEVICE: var.runner_Device
-#    
+env:
+    parameter-store:
+      RUNNERUSER: AA_runner_user
+      RUNNERDEVICE: AA_runner_device
+    
 
 phases:
   pre_build:
@@ -21,10 +21,10 @@ phases:
     commands:
       - terraform apply -var-file="dev-app.tfvars" --auto-approve
   
-  #post_build:
-  #  commands:
-  #   - echo ${RUNNERUSER}
-  #   #- echo ${var.runner_User}
-  #   - echo ${RUNNERDEVICE}
-  #   - aws lambda update-function-configuration --function-name PSTest --environment "Variables={runnerUser=${RUNNERUSER},runnerDevice=${RUNNERDEVICE}}"
+  post_build:
+    commands:
+     - echo ${RUNNERUSER}
+     #- echo ${var.runner_User}
+     - echo ${RUNNERDEVICE}
+     - aws lambda update-function-configuration --function-name PSTest --environment "Variables={runnerUser=${RUNNERUSER},runnerDevice=${RUNNERDEVICE}}"
      
