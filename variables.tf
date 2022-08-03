@@ -16,11 +16,11 @@ variable "aws_region" {
 variable "runner_User" {
   description = "Runner user"
   type        = string
-  default     = null
+  default     = "123"
 }
 
 variable "runner_Device" {
   description = "Runner device"
   type        = string
-  default     = null
+  default     = "456"
 }
